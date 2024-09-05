@@ -23,8 +23,8 @@ jobs:
       - name: Build and push Docker image
         run: |
           docker build -t medusa-backend .
-          docker tag medusa-backend:latest <YOUR_AWS_ACCOUNT_ID>.dkr.ecr.<YOUR_REGION>.amazonaws.com/medusa-backend:latest
-          docker push <YOUR_AWS_ACCOUNT_ID>.dkr.ecr.<YOUR_REGION>.amazonaws.com/medusa-backend:latest
+          docker tag medusa-backend:latest 992382465189.dkr.ecr.us-east-1.amazonaws.com/medusa-backend:latest
+          docker push 992382465189.dkr.ecr.us-east-1.amazonaws.com/medusa-backend:latest
 
       - name: Deploy to ECS
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
