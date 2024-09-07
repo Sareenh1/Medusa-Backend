@@ -13,10 +13,8 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install --only=production
 
-# Copy the rest of the application code to the working directory
 COPY . .
 
-# Expose the port Medusa will run on
 EXPOSE 9000
 
 # Command to run Medusa
