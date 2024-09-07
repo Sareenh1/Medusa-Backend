@@ -1,7 +1,6 @@
-# Use the official Node.js image as the base image
+
 FROM node:18-alpine
 
-# Set environment variables
 ENV NODE_ENV=production
 ENV MEDUSA_BACKEND_URL=http://localhost:9000
 
