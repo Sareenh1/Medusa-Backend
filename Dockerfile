@@ -4,7 +4,6 @@ FROM node:18-alpine
 ENV NODE_ENV=production
 ENV MEDUSA_BACKEND_URL=http://localhost:9000
 
-# Create and set the working directory
 WORKDIR /usr/src/app
 
 # Copy package.json and package-lock.json (or yarn.lock) to the working directory
