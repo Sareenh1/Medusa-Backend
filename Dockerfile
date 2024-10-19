@@ -1,7 +1,5 @@
-# Use smaller Node.js image
 FROM node:20-slim
 
-# Set working directory
 WORKDIR /app
 
 # Copy package*.json files
