@@ -1,17 +1,20 @@
+# Use smaller Node.js image
+FROM node:20-slim
 
-FROM node:18-alpine
+# Set working directory
+WORKDIR /app
 
-ENV NODE_ENV=production
-ENV MEDUSA_BACKEND_URL=http://localhost:9000
-
-WORKDIR /usr/src/app
-
+# Copy package*.json files
 COPY package*.json ./
 
-RUN npm install
+# Install dependencies
+RUN npm install 
 
+# Copy application code
 COPY . .
 
+# Expose port
 EXPOSE 9000
 
-CMD ["npm", "run", "start"]
+# Run command
+CMD ["npx", "medusa", "start"]
