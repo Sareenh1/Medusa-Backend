@@ -11,8 +11,6 @@ RUN npm install
 # Copy application code
 COPY . .
 
-# Expose port
 EXPOSE 9000
 
-# Run command
 CMD ["npx", "medusa", "start"]
